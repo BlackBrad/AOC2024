@@ -10,7 +10,7 @@ AS_FLAGS := -march=rv32ima_zicsr_zifencei_zba_zbb_zbs_zbkb_zca_zcb -mabi=ilp32
 
 .PHONY: all
 
-all: elf2uf2
+all: elf2uf2 examples
 
 .PHONY: examples
 examples:
@@ -21,5 +21,5 @@ elf2uf2: ./tools/elf2uf2/main.cpp
 	cp ./tools/elf2uf2/elf2uf2 .
 
 clean:
-	rm *.o
 	rm elf2uf2
+	make -C ./examples clean

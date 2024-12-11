@@ -3,7 +3,7 @@
 .section: .text
 
 _start:
-	li t0, 0x10000000
+	la t0, UART
 	la t1, helloworld
 
 loop:

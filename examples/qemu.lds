@@ -12,3 +12,4 @@ SECTIONS {
     hello_world.o(.text.bios)
   } > dram_space
 }
+UART = 0x10000000;
