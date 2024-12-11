@@ -11,7 +11,6 @@ RUN apk add gcc-riscv-none-elf
 RUN apk add newlib-riscv-none-elf
 RUN apk add picolibc-riscv-none-elf
 RUN apk add qemu-system-riscv32
-RUN apk add qemu-system-riscv64
 # ARM stuff for KB2040
 RUN apk add binutils-arm-none-eabi
 RUN apk add gcc-arm-none-eabi
@@ -19,4 +18,7 @@ RUN apk add newlib-arm-none-eabi
 RUN apk add picolibc-arm-none-eabi
 RUN apk add gcc-arm-none-eabi
 RUN apk add qemu-system-arm
-RUN apk add qemu-system-aarch64
+# Debug tools so we don't have to leave the docker image
+RUN apk add vim
+RUN apk add git
+RUN apk add bash
